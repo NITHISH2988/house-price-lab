@@ -4,6 +4,8 @@ Reproducible classical ML experiments for housing price regression, with leakage
 
 ## Architecture
 
+For module-by-module walkthroughs, reproduction steps, and interview concepts, see [DEVELOPER_GUIDE.md](DEVELOPER_GUIDE.md).
+
 `data.py` provides a deterministic synthetic generator used for code verification only. `train.py` reserves one 20% holdout test split, runs five-fold CV only on the remaining training split, compares a mean baseline, Ridge regression, and Random Forest, and selects the best candidate by CV MAE. Numeric and categorical imputation/encoding are fitted inside a scikit-learn pipeline, so CV folds do not share learned preprocessing. The selected model and a JSON report are written under `artifacts/`.
 
 `api.py` validates feature ranges and allowed categories before applying the trained pipeline. It returns a 503 until the model artifact exists.
