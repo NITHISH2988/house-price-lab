@@ -1,6 +1,6 @@
 # House Price Lab
 
-A tabular regression lab focused on reproducible splits, train-only preprocessing, candidate comparison, error analysis, and a local prediction endpoint. Synthetic results are kept separate from real-world housing data claims.
+Reproducible classical ML experiments for housing price regression, with leakage-safe pipelines and a prediction API. This tabular regression lab focuses on reproducible splits, train-only preprocessing, candidate comparison, error analysis, and a local prediction endpoint. Synthetic results are kept separate from real-world housing data claims.
 
 ## Architecture
 
